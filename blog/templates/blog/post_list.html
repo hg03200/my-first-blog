@@ -18,15 +18,6 @@
               <div class="post">
                   <p class="date">published: {{ post.published_date }}</p>
                   <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-                  <!-->  괄호% %괄호 : 장고 템플릿 태크
-                  blog.views.post_detail : post_detail 뷰 경로
-                   => blog는 응용프로그램(디렉터리 blog)의 이름이다!!
-                   => views : views.py의 파일명
-                  pk=post.pk : pk는 primary key(기본키)의 줄임말
-                   => 게시물이 증가할 때마다 pk값이 1,2,3 등으로 증가
-                  post.pk를 써서 기본키에 접근할 수 있고, 같은 방법으로 post 객체 내 다른 필드(title, author)에 접근도 가능
-
-                -->
                   <p>{{ post.text|linebreaksbr }}</p>
               </div>
           {% endfor %}
